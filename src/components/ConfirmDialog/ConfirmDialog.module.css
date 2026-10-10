@@ -1,0 +1,7 @@
+.message {
+  color: var(--color-text-muted);
+}
+
+.extra {
+  margin-top: 16px;
+}

@@ -1,0 +1,78 @@
+.container {
+  position: fixed;
+  /* Just below the top bar, so the user menu stays clickable */
+  top: calc(var(--topbar-height) + 8px);
+  right: 16px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(360px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 12px 12px 14px;
+  border: 1px solid;
+  border-left-width: 4px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  pointer-events: auto;
+  animation: slide-in 0.18s ease-out;
+}
+
+.success {
+  background: var(--color-success-soft);
+  border-color: var(--color-success-border);
+  border-left-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.pending {
+  background: var(--color-warning-soft);
+  border-color: var(--color-warning-border);
+  border-left-color: var(--color-warning-accent);
+  color: var(--color-warning);
+}
+
+.fail {
+  background: var(--color-danger-soft);
+  border-color: var(--color-danger-border);
+  border-left-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.icon {
+  display: inline-flex;
+  margin-top: 1px;
+}
+
+.message {
+  flex: 1;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.close {
+  display: inline-flex;
+  padding: 2px;
+  border: none;
+  background: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.close:hover {
+  color: var(--color-text);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}

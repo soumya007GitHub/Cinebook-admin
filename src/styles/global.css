@@ -1,0 +1,137 @@
+/*
+ * Design tokens + base element styles. Component styles live in *.module.css files.
+ * Colours are per theme: light below, dark in :root[data-theme='dark'] (set by ThemeProvider).
+ */
+:root {
+  color-scheme: light;
+
+  --color-bg: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8f9fb;
+  --color-border: #e2e5ea;
+  --color-border-strong: #cfd4dc;
+  --color-text: #1d2433;
+  --color-text-muted: #5f6b7a;
+  --color-text-subtle: #8a94a3;
+  --color-neutral-soft: #f1f3f6;
+  --color-track: #e8ebf0;
+
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-soft: #eef3fe;
+
+  --color-success: #15803d;
+  --color-success-soft: #ecfdf3;
+  --color-success-border: #a6e3bf;
+  --color-warning: #b45309;
+  --color-warning-soft: #fffbeb;
+  --color-warning-border: #f5d88a;
+  --color-warning-accent: #d99a06;
+  --color-danger: #c81e1e;
+  --color-danger-soft: #fef2f2;
+  --color-danger-border: #f5b5b5;
+  /* Filled red buttons (white text) */
+  --color-danger-solid: #c81e1e;
+  --color-danger-solid-hover: #a51818;
+  --color-info: #0369a1;
+  --color-info-soft: #f0f9ff;
+
+  --sidebar-bg: #111827;
+  --sidebar-text: #c3c9d4;
+  --sidebar-active: #1f2937;
+
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.12);
+
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 8px;
+
+  --sidebar-width: 232px;
+  --topbar-height: 56px;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg: #0f1218;
+  --color-surface: #171b23;
+  --color-surface-muted: #1d222c;
+  --color-border: #2a303b;
+  --color-border-strong: #3a4250;
+  --color-text: #e6e9ef;
+  --color-text-muted: #a0a8b6;
+  --color-text-subtle: #7b8494;
+  --color-neutral-soft: #252b36;
+  --color-track: #2a303b;
+
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-soft: rgba(59, 130, 246, 0.18);
+
+  --color-success: #4ade80;
+  --color-success-soft: #000;
+  --color-success-border: rgba(74, 222, 128, 0.35);
+  --color-warning: #fbbf24;
+  --color-warning-soft: #000;
+  --color-warning-border: rgba(251, 191, 36, 0.35);
+  --color-warning-accent: #f59e0b;
+  --color-danger: #000;
+  --color-danger-soft: rgba(239, 68, 682);
+  --color-danger-border: rgba(248, 113, 113, 0.35);
+  --color-danger-solid: #dc2626;
+  --color-danger-solid-hover: #b91c1c;
+  --color-info: #38bdf8;
+  --color-info-soft: rgba(56, 189, 248, 0.12);
+
+  --sidebar-bg: #0b0e13;
+  --sidebar-text: #aeb6c3;
+  --sidebar-active: #1a1f29;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

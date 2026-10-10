@@ -1,0 +1,35 @@
+.strong {
+  font-weight: 500;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.muted {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.occupancy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 80px;
+  font-size: 13px;
+}
+
+.bar {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-track);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--color-primary);
+}

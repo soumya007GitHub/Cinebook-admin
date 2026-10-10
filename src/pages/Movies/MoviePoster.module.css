@@ -1,0 +1,26 @@
+.poster {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--color-neutral-soft);
+  color: var(--color-text-subtle);
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sm {
+  width: 36px;
+  height: 52px;
+}
+
+.lg {
+  width: 120px;
+  height: 172px;
+  border-radius: var(--radius);
+}

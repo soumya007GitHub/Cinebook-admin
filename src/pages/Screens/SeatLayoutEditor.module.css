@@ -1,0 +1,143 @@
+.editor {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.panelTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.total {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.rowsPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 56px 72px minmax(0, 1fr) 30px;
+  align-items: end;
+  gap: 6px;
+}
+
+.remove {
+  padding: 0;
+  width: 30px;
+  height: 36px;
+}
+
+.previewPanel {
+  min-width: 0;
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.preview {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface-muted);
+  overflow-x: auto;
+  max-height: 380px;
+}
+
+.screenBar {
+  margin: 0 auto 16px;
+  max-width: 320px;
+  padding: 4px 0;
+  border-top: 3px solid var(--color-border-strong);
+  border-radius: 50% 50% 0 0 / 12px 12px 0 0;
+  text-align: center;
+  font-size: 11px;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.previewRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  width: max-content;
+  min-width: 100%;
+}
+
+.previewLabel {
+  width: 20px;
+  flex-shrink: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+.seats {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  flex: 1;
+}
+
+.seat {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.REGULAR {
+  background: #9db4e8;
+}
+
+.PREMIUM {
+  background: #e3b341;
+}
+
+.RECLINER {
+  background: #b07cc6;
+}
+
+@media (max-width: 760px) {
+  .editor {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

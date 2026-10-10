@@ -1,0 +1,15 @@
+.reference {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.muted {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
